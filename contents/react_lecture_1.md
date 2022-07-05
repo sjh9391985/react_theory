@@ -21,3 +21,10 @@
     - A ~> B 페이지 이동시 B에 해당하는 페이지는 이동시에 가져옴 (서버에서 페이지를 내려줌)
     - HTML을 서버에서 렌더링
     - SSG: 잘 바뀌지 않는 항목들을 HTML에 박아놓음[webpack build시 DB에서 select]
+
+### 실무 react 작동원리
+
+    - CSR 작동방식의 Base
+    - react는 react element 단위로 되어있음.
+    - element 단위로 되어 있기에 JSX 컴파일시 변환
+    
