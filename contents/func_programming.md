@@ -24,3 +24,22 @@
     
 <hr/>
 
+### composition
+    - 여러개의 함수 중 리팩토링이 필요할 경우 쪼개서 사용
+    ```
+    f1 : fullName()
+    f2 : appendAddr()
+    f3 : removeAddr()
+
+    const data = compose(fullName, appendAddr, removeAddr)(user);
+
+    const compose = (...fns) => (obj) => {
+        fns.reduce((temp , fn) => fn(C), obj );
+    }
+    - 3개의 인자를 주면 arguments가 Array 형태로 변경됨.
+
+    const fullName = (user) => ({
+        ...user, fullName: `${userFirstName} ${userLastName}`
+    })
+    ```
+
